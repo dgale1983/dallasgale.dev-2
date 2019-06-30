@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Layout from './components/styled/layout'
+import Landing from './components/landing'
+import WorkHistory from './components/work'
+import SkillsTech from './components/skills-tech'
+import GetInTouch from './components/get-in-touch'
+import Thanks from './components/get-in-touch/thanks'
 
-export default App;
+import './styles/app.scss'
+
+// TODO: export const ThemeContext = React.createContext()
+
+const App = () => (
+  <Layout>
+    <Switch>
+      <Route exact path="/" component={Landing} />
+      <Route path="/work-history/" component={WorkHistory} />
+      <Route path="/skills-tech/" component={SkillsTech} />
+      <Route path="/get-in-touch/" component={GetInTouch} />
+      <Route path="/thanks/" component={Thanks} />
+    </Switch>
+  </Layout>
+)
+
+export default App
