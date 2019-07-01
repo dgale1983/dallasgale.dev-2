@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { black, red, grayLight } from '../styles/colors'
+import { red, grayLight } from '../styles/colors'
 
 import { transitionPt1 } from '../utils/transitions'
 import pxToRem from '../utils/px_to_rem'

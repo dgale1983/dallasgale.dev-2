@@ -34,35 +34,22 @@ class Form extends React.Component {
     const { name, email, message } = this.state
     return (
       <>
+        {/* A little help for the Netlify post-processing bots */}
+        <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
+        </form>
         <form
           className="forms__form"
           onSubmit={this.handleSubmit}
           method="post"
-          netlify
+          netlify="true"
           data-netlify="true"
           name="contact"
         >
-          <input
-            className="forms__input"
-            type="hidden"
-            name="form-name"
-            value="contact"
-          />
-          <p hidden>
-            <label
-              className="forms__label"
-              htmlFor="bot-field"
-            >
-              Don’t fill this out:
-              {' '}
-              <input
-                className="forms__input"
-                name="bot-field"
-                onChange={this.handleChange}
-              />
-            </label>
-          </p>
           <div>
+            <input type="hidden" name="form-name" value="contact" />
             <label
               className="forms__label"
               htmlFor="name"
