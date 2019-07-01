@@ -3,6 +3,7 @@ import { black, white, red } from '../styles/colors'
 import pxToRem from '../utils/px_to_rem'
 
 import { transitionPt1, transitionPt2 } from '../utils/transitions'
+import { ScreenPhoneDown } from '../utils/media';
 
 export const PrimaryButton = styled.button`
 
@@ -48,6 +49,11 @@ export const LargeCtaLink = styled.a`
   padding: ${pxToRem(15)} ${pxToRem(25)};
   text-decoration: none;
   ${transitionPt1};
+
+  @media ${ScreenPhoneDown} {
+    font-size: ${pxToRem(15)};
+    padding: ${pxToRem(10)} ${pxToRem(20)};
+  }
 
   &:hover {
     // filter: invert(1);

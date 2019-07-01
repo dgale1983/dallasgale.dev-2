@@ -4,24 +4,19 @@ import styled from 'styled-components'
 
 import { red } from '../../styles/colors'
 
-import { ScreenTabletLandscapeDown, ScreenTabletDown } from '../../utils/media'
+import { ScreenTabletLandscapeDown, ScreenTabletDown, ScreenPhoneDown } from '../../utils/media'
 
 const StyledPageBottom = styled.div`
 
   background-color: ${red};
   bottom: 0;
   display: block;
-  height: 30vh;
+  height: auto;
   width: 100%;
   position: fixed;
 
-  @media ${ScreenTabletLandscapeDown} {
-    position: relative;
-    height: 50vh;
-  }
   @media ${ScreenTabletDown} {
-    position: relative;
-    height: 40vh;
+    height: auto;
   }
 `
 

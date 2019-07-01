@@ -7,7 +7,7 @@ import { ThemeContext } from '../get-in-touch'
 
 import { pageLoadContentAppear } from '../utils/transitions'
 import pxToRem from '../utils/px_to_rem'
-import { ScreenTabletLandscapeDown } from '../utils/media'
+import { ScreenTabletLandscapeDown, ScreenSmallDeviceDown } from '../utils/media'
 
 import { fadedBlack } from '../styles/colors'
 import ContentWrapper from './content_wrapper'
@@ -28,10 +28,13 @@ const StyledPage = styled.div`
   z-index: 2;
 
   @media ${ScreenTabletLandscapeDown} {
-    padding: ${pxToRem(20)};
-    // margin-top: ${pxToRem(80)};
+    padding: 0 ${pxToRem(60)};
     position: relative;
     min-height: auto;
+  }
+
+  @media ${ScreenSmallDeviceDown} {
+    padding: 0 ${pxToRem(20)};
   }
 `
 

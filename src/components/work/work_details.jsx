@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components'
 
 import { black, red, white } from '../styles/colors'
 import pxToRem from '../utils/px_to_rem'
-import { ScreenWidescreenDown, ScreenTabletLandscapeDown } from '../utils/media'
+import { ScreenWidescreenDown, ScreenTabletLandscapeDown, ScreenPhoneDown } from '../utils/media'
 
 const slideUp = keyframes`
   0% {
@@ -32,7 +32,7 @@ const StyledInfo = styled.div`
     width: 70%;
   }
 
-  @media ${ScreenTabletLandscapeDown} {
+  @media ${ScreenPhoneDown} {
     visibility: hidden;
     display: none;
   }

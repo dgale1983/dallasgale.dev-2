@@ -2,11 +2,13 @@
   &__heading {
     &--one {
       font-size: rem(100);
+      line-height: rem(80);
       letter-spacing: rem(-2);
+      margin-bottom: rem(60);
 
       @include respond-to("desktop-down") {
         font-size: rem(80);
-        line-height: rem(40);
+        line-height: rem(60);
         margin-bottom: rem(40);
       }
 
@@ -15,7 +17,19 @@
       }
 
       @include respond-to("tablet-down") {
+        font-size: rem(120);
+        line-height: rem(90);
+      }
+
+      @include respond-to("phone-down") {
+        font-size: rem(60);
+        line-height: rem(50);
+        letter-spacing: rem(-1);
+      }
+
+      @include respond-to("small-device-down") {
         font-size: rem(50);
+        line-height: rem(40);
       }
     }
 
@@ -84,7 +98,20 @@
       }
 
       @include respond-to("tablet-down") {
-        padding-right: rem(40);
+        padding-right: rem(200);
+        font-size: rem(35);
+        line-height: rem(50);
+      }
+
+      @include respond-to("phone-down") {
+        padding-right: 0;
+        font-size: rem(25);
+        line-height: rem(35);
+      }
+
+      @include respond-to("small-device-down") {
+        font-size: rem(20);
+        line-height: rem(30);
       }
     }
   }
