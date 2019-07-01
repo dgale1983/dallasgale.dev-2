@@ -11,7 +11,7 @@ import { workHistoryData } from './data'
 import Header from '../ui_elements/header'
 import { WorkTile } from './work_tile'
 import Stats from '../stats'
-import { ScreenWidescreenDown, ScreenTabletLandscapeDown, ScreenPhoneDown } from '../utils/media'
+import { ScreenWidescreenDown, ScreenTabletLandscapeDown, ScreenPhoneDown, ScreenDesktopDown } from '../utils/media'
 import pxToRem from '../utils/px_to_rem'
 
 const pageName = 'Work History.'
@@ -25,6 +25,10 @@ const StyledGrid = styled.div`
 
   @media ${ScreenWidescreenDown} {
     margin-top: 10%;
+  }
+
+  @media ${ScreenDesktopDown} {
+    grid-template-columns: repeat(9, 1fr);
   }
 
   @media ${ScreenTabletLandscapeDown} {
