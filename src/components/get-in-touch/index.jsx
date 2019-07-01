@@ -48,10 +48,12 @@ const StyledChannelGrid = styled.div`
   align-items: center;
   grid-gap: 5%;
   justify-items: start;
-  grid-template-columns: 10% 75%;
+  grid-template-columns: 10% 85%;
 
   img {
     max-width: ${pxToRem(30)};
+    padding-bottom: ${pxToRem(10)};
+    padding-top: ${pxToRem(10)};
   }
 `
 

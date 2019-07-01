@@ -30,7 +30,7 @@ const StyledContent = styled.div`
   }
 
   @media ${ScreenDesktopDown} {
-    padding-top: 0%;
+    padding-top: 3%;
     width: 70%;
   }
 
