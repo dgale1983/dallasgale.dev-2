@@ -23,14 +23,13 @@
   }
 
   @include respond-to("tablet-down") {
-    right: -30%;
+    right: -50%;
     bottom: rem(40);
   }
   
   @include respond-to("phone-down") {
-    transform: scale(0.5);
-    right: -40%;
-    bottom: rem(-40);
+    display: none;
+    visibility: hidden;
   }
 
   @include respond-to("small-device-down") {
