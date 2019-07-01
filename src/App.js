@@ -9,10 +9,6 @@ import SkillsTech from './components/skills-tech'
 import GetInTouch from './components/get-in-touch'
 import Thanks from './components/get-in-touch/thanks'
 
-import './styles/app.scss'
-
-// TODO: export const ThemeContext = React.createContext()
-
 const App = () => (
   <Layout>
     <Switch>

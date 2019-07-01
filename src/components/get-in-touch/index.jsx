@@ -74,12 +74,12 @@ const Channel = (props) => {
   return (
     <StyledChannelGrid>
       <div>
-        <a href={url} target="_blank">
+        <a href={url} rel="noopener" target="_blank">
           <img className="spacing__margin-btm--none" src={src} alt={alt} />
         </a>
       </div>
       <div>
-        <StyledLink href={url} target="_blank">
+        <StyledLink href={url} rel="noopener" target="_blank">
           {label}
         </StyledLink>
       </div>

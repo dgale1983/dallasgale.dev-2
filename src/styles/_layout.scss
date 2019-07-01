@@ -4,6 +4,11 @@ $base_size: 16; // Default
   @return ($target / $context) * 1rem;
 }
 
+@font-face {
+  font-family: neuzeit-grotesk;
+  font-display: auto;
+  src: local(neuzeit-grotesk);
+}
 html {
   font-family: neuzeit-grotesk, helvetics, arial, sans-serif;
   -ms-text-size-adjust: 100%;

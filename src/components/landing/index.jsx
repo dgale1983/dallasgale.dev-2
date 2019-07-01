@@ -88,7 +88,7 @@ const Landing = () => (
           <div>
             Looking to hire?
           </div>
-          <StyledLink href="https://drive.google.com/file/d/1SOfvB2-V5fBzHFcJlK2xnubdqP6UYBVi/view?usp=sharing" target="_blank">
+          <StyledLink href="https://drive.google.com/file/d/1SOfvB2-V5fBzHFcJlK2xnubdqP6UYBVi/view?usp=sharing" rel="noopener" target="_blank">
             Download CV &amp; Folio
           </StyledLink>
         </StyledHireCta>

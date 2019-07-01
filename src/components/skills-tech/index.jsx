@@ -1,11 +1,7 @@
 import React from 'react'
-import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
 
 import { PageTitle } from '../styled/typography'
-
-import { tabletWidth } from '../utils/media'
-import pxToRem from '../utils/px_to_rem'
 
 import Header from '../ui_elements/header'
 import Page from '../styled/page'
@@ -36,7 +32,6 @@ const SkillsTech = () => (
         </div>
       </StyledContent>
     </Page>
-    {/* <Footer /> */}
   </>
 )
 
