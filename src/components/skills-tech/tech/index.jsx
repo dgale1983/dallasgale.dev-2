@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { black, white, grayLight } from '../../styles/colors'
 import { transitionPt1 } from '../../utils/transitions'
 import pxToRem from '../../utils/px_to_rem'
-import { ScreenWidescreenDown, ScreenDesktopDown, ScreenTabletDown } from '../../utils/media'
+import { ScreenWidescreenDown, ScreenDesktopDown, ScreenTabletDown, ScreenPhoneDown } from '../../utils/media'
 
 
 import * as data from './data'
@@ -71,6 +71,7 @@ const StyledIconBox = styled.div`
 `
 
 const StyledTechName = styled.h4`
+
   background: ${black};
   height: 50px;
   border-radius: 20px;
@@ -79,14 +80,19 @@ const StyledTechName = styled.h4`
   color: ${white};
   font-size: ${pxToRem(20)};
   font-weight: 400;
-  line-height: 10px;
+  line-height: ${pxToRem(20)};
   opacity: ${props => (props.hovered ? 1 : 0)};
   position: fixed;
-  min-width: 300px;
+  min-width: ${pxToRem(300)};
   transition: all  ease 0.3s;
-  padding: 0 20px;
+  padding: 0 ${pxToRem(20)};
   top: ${pxToRem(100)};
   left: ${pxToRem(20)};
+
+  @media ${ScreenPhoneDown} {
+    font-size: ${pxToRem(14)};
+    top: ${pxToRem(110)};
+  }
 `
 
 const Tech = () => {

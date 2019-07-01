@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import pxToRem from '../../utils/px_to_rem'
 import { black, white, grayLight } from '../../styles/colors'
-import { ScreenDesktopDown, ScreenTabletDown } from '../../utils/media'
+import { ScreenDesktopDown, ScreenTabletDown, ScreenSmallDeviceDown } from '../../utils/media'
 
 import * as data from './data'
 
@@ -21,12 +21,15 @@ const StyledGrid = styled.div`
   @media ${ScreenTabletDown} {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media ${ScreenSmallDeviceDown} {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 
 const StyledCategory = styled.div`
 
   background: ${grayLight};
-  // border: 2px solid ${black};
   padding: 20px;
 
   &:hover {
