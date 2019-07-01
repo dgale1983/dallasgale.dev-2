@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 
-import { red, white } from '../styles/colors'
+import { red } from '../styles/colors'
 import pxToRem from '../utils/px_to_rem'
 import { ScreenWidescreenDown, ScreenPhoneDown } from '../utils/media'
 
@@ -18,7 +18,6 @@ const slideUp = keyframes`
 
 const StyledInfo = styled.div`
 
-  background: ${white};
   margin: 0 auto;
   padding: 0 ${pxToRem(20)};
   width: 50%;
@@ -33,8 +32,13 @@ const StyledInfo = styled.div`
   }
 
   @media ${ScreenPhoneDown} {
-    visibility: hidden;
-    display: none;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 20;
   }
 `
 
@@ -43,6 +47,10 @@ const StyledGrid = styled.div`
   display: grid;
   grid-gap: 2%;
   grid-template-columns: 38% 60%;
+
+  @media ${ScreenPhoneDown} {
+    display: block;
+  }
 `
 
 const StyledUl = styled.ul`

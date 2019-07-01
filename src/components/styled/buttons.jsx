@@ -51,12 +51,12 @@ export const LargeCtaLink = styled.a`
   ${transitionPt1};
 
   @media ${ScreenPhoneDown} {
-    font-size: ${pxToRem(15)};
-    padding: ${pxToRem(10)} ${pxToRem(20)};
+    background: ${red};
+    display: block;
+    text-align: center;
   }
 
   &:hover {
-    // filter: invert(1);
     background: ${red};
     ${transitionPt2};
   }

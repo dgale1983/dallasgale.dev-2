@@ -5,42 +5,15 @@ import styled from 'styled-components'
 
 import { ThemeContext } from '../../get-in-touch'
 
-import pxToRem from '../../utils/px_to_rem'
-import { ScreenTabletLandscapeDown } from '../../utils/media'
 import { black, red, white } from '../../styles/colors'
-import { borderBottomRed } from '../borders'
 import { transitionPt1, transitionPt2 } from '../../utils/transitions'
 
 import { routes } from './routes'
-// import Time from '../time'
-
-const StyledNav = styled.nav`
-  text-align: right;
-`
-
-const StyledUl = styled.ul`
-  display: inline-block;
-  list-style: none;
-`
-
-const StyledLi = styled.li`
-  display: inline-block;
-  font-size: ${pxToRem(10)};
-  font-weight: 600;
-  width: ${pxToRem(80)};
-  text-align: left;
-  margin-right: ${pxToRem(12)};
-  padding-bottom: ${pxToRem(4)};
-  ${borderBottomRed};
-
-  @media ${ScreenTabletLandscapeDown} {
-    display: block;
-  }
-`
 
 const StyledLink = styled(Link)`
 
-  color: ${props => (props.theme === 'dark' ? white : black)};
+  // color: ${props => (props.theme === 'dark' ? white : black)};
+  color: ${white};
   text-decoration: none;
   ${transitionPt1};
   &:hover {
@@ -53,19 +26,18 @@ const Nav = () => {
   const context = useContext(ThemeContext)
 
   return (
-    <StyledNav>
-      <StyledUl className="nav__links">
+    <nav className="elements__nav">
+      <ul className="elements__nav-links">
         {routes.map(route => (
-          <StyledLi key={route.name}>
+          <li className="elements__nav-links--item" key={route.name}>
             <StyledLink to={`/${route.url}/`} theme={context}>
               {route.name}
             </StyledLink>
-          </StyledLi>
+          </li>
         ))
         }
-      </StyledUl>
-      {/* <Time /> */}
-    </StyledNav>
+      </ul>
+    </nav>
   )
 }
 

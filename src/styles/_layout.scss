@@ -15,6 +15,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  background: $faded_black;
+  color: $white;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -218,7 +220,6 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 1);
   font-family: neuzeit-grotesk, sans-serif;
   font-weight: normal;
   word-wrap: break-word;

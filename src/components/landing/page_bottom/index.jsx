@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import pxToRem from '../../utils/px_to_rem'
 import { red } from '../../styles/colors'
 
-import { ScreenTabletDown } from '../../utils/media'
+import { ScreenTabletDown, ScreenSmallDeviceDown } from '../../utils/media'
 
 const StyledPageBottom = styled.div`
 
@@ -16,7 +17,13 @@ const StyledPageBottom = styled.div`
   position: fixed;
 
   @media ${ScreenTabletDown} {
+    padding: ${pxToRem(20)};
     height: auto;
+  }
+
+  @media ${ScreenSmallDeviceDown} {
+    position: relative;
+    background: transparent;
   }
 `
 

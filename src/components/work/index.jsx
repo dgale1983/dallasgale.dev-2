@@ -11,8 +11,12 @@ import { workHistoryData } from './data'
 import Header from '../ui_elements/header'
 import { WorkTile } from './work_tile'
 import Stats from '../stats'
-import { ScreenWidescreenDown, ScreenTabletLandscapeDown, ScreenPhoneDown, ScreenDesktopDown } from '../utils/media'
-import pxToRem from '../utils/px_to_rem'
+import {
+  ScreenWidescreenDown,
+  ScreenTabletLandscapeDown,
+  ScreenPhoneDown,
+  ScreenDesktopDown,
+} from '../utils/media'
 
 const pageName = 'Work History.'
 
@@ -20,6 +24,7 @@ const StyledGrid = styled.div`
 
   display: grid;
   align-items: start;
+  grid-gap: 2px;
   grid-template-columns: repeat(5, 1fr);
   margin-top: 5%;
 
@@ -36,8 +41,8 @@ const StyledGrid = styled.div`
   }
 
   @media ${ScreenPhoneDown} {
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: ${pxToRem(100)};
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1px;
   }
 `
 

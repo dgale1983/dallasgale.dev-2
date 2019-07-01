@@ -1,7 +1,6 @@
 .elements {
   &__header {
     display: grid;
-    // background: $white;
     grid-template-columns: 50% 50%;
     left: 0;
     right: 0;
@@ -19,6 +18,35 @@
   &__li {
     &--no-style {
       list-style: none;
+    }
+  }
+
+  &__nav {
+    text-align: right;
+  }
+
+  &__nav-links {
+    display: inline-block;
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+
+    &--item {
+      display: inline-block;
+      font-size: rem(13);
+      font-weight: 600;
+      width: rem(80);
+      text-align: left;
+      margin-right: rem(12);
+      padding-bottom: rem(4);
+      border-bottom: 1px solid $red;
+
+      @include respond-to("tablet-landscape-down") {
+        display: block;
+        font-size: rem(14);
+        width: auto;
+        text-align: right;
+      }
     }
   }
 }

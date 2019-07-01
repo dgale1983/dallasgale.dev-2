@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import pxToRem from '../utils/px_to_rem'
-import { black, red, white } from '../styles/colors'
+import { red, white } from '../styles/colors'
 
 import Header from '../ui_elements/header'
 import PageBottom from './page_bottom'
@@ -13,8 +13,8 @@ import {
   ScreenWidescreenDown,
   ScreenTabletLandscapeDown,
   ScreenTabletDown,
-  ScreenPhoneDown,
   ScreenDesktopDown,
+  ScreenSmallDeviceDown,
 } from '../utils/media'
 
 const StyledContent = styled.div`
@@ -42,9 +42,9 @@ const StyledContent = styled.div`
   @media ${ScreenTabletDown} {
     width: 100%;
   }
-
-  @media ${ScreenPhoneDown} {
-    padding-top: 22%;
+  
+  @media ${ScreenSmallDeviceDown} {
+    padding-bottom: ${pxToRem(20)};
   }
 `
 
@@ -56,21 +56,22 @@ const StyledCode = styled.span`
 
 const StyledHireCta = styled.div`
 
-  color: ${black};
+  color: ${white};
   font-size: ${pxToRem(35)};
   font-weight: 100;
-  left: ${pxToRem(0)};
   margin-top: ${pxToRem(40)};
-  bottom: 20px;
-  left: 20px;
+  bottom: ${pxToRem(20)};
+  left: ${pxToRem(20)};
   position: relative;
   letter-spacing: ${pxToRem(-2)};
   width: auto;
   z-index: 10;
 
-  // @media ${ScreenTabletDown} {
-  //   position: relative;
-  // }
+  @media ${ScreenTabletDown} {
+    position: relative;
+    margin-top: ${pxToRem(10)};
+    left: 0;
+  }
 
   div {
     color: ${white};

@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 import pxToRem from '../utils/px_to_rem'
 import { ScreenWidescreenDown } from '../utils/media';
-import { black } from '../styles/colors'
+import { white } from '../styles/colors'
 
 export const PageTitle = styled.h1`
 
   font-size: ${pxToRem(40)};
-  color: ${black};
+  color: ${white};
   margin-top: ${pxToRem(50)};
   letter-spacing: ${pxToRem(-2)};
   position: fixed;

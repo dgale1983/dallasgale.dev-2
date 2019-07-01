@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import pxToRem from '../utils/px_to_rem'
 import { boxWidthExpand, statsAppear } from '../utils/transitions'
-import { ScreenWidescreenDown, ScreenTabletDown } from '../utils/media'
+import { ScreenWidescreenDown, ScreenTabletDown, ScreenPhoneDown } from '../utils/media'
 
 import { ThinBox } from '../ui_elements/thin_box'
 import { BoxLabelJustify } from '../styled/typography'
@@ -35,6 +35,11 @@ const StyledGrid = styled.div`
 
   @media ${ScreenTabletDown} {
     width: 100%;
+  }
+
+  @media ${ScreenPhoneDown} {
+    display: none;
+    visibility: hidden;
   }
 `
 

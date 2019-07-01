@@ -4,7 +4,12 @@ import styled from 'styled-components'
 import { black, white, grayLight } from '../../styles/colors'
 import { transitionPt1 } from '../../utils/transitions'
 import pxToRem from '../../utils/px_to_rem'
-import { ScreenWidescreenDown, ScreenDesktopDown, ScreenTabletDown, ScreenPhoneDown } from '../../utils/media'
+import {
+  ScreenWidescreenDown,
+  ScreenDesktopDown,
+  ScreenTabletDown,
+  ScreenPhoneDown,
+} from '../../utils/media'
 
 
 import * as data from './data'
@@ -31,11 +36,14 @@ const StyledIconGrid = styled.div`
 
   @media ${ScreenTabletDown} {
     grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1px;
+    margin-bottom: ${pxToRem(10)};
   }
 `
 
 const StyledIconBox = styled.div`
 
+  background: ${white};
   max-height: ${pxToRem(largeIcon)};
   max-width: ${pxToRem(largeIcon)};
   ${transitionPt1};
@@ -83,15 +91,19 @@ const StyledTechName = styled.h4`
   line-height: ${pxToRem(20)};
   opacity: ${props => (props.hovered ? 1 : 0)};
   position: fixed;
-  min-width: ${pxToRem(300)};
   transition: all  ease 0.3s;
   padding: 0 ${pxToRem(20)};
   top: ${pxToRem(100)};
   left: ${pxToRem(20)};
 
   @media ${ScreenPhoneDown} {
-    font-size: ${pxToRem(14)};
-    top: ${pxToRem(110)};
+    // display: none;
+    // visibility: hidden;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: ${pxToRem(15)};
+    position: relative;
   }
 `
 
@@ -116,7 +128,7 @@ const Tech = () => {
       <StyledIconGrid>
         {
           data.techIcons.map(tech => (
-            <StyledIconBox onMouseEnter={() => handleMouseEnter(tech)} onMouseLeave={() => handleMouseLeave()}>
+            <StyledIconBox key={tech.name} onMouseEnter={() => handleMouseEnter(tech)} onMouseLeave={() => handleMouseLeave()}>
               <img src={tech.src} alt={tech.name} />
             </StyledIconBox>
           ))

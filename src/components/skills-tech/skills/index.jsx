@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import pxToRem from '../../utils/px_to_rem'
-import { black, white, grayLight } from '../../styles/colors'
+import { black, white } from '../../styles/colors'
 import { ScreenDesktopDown, ScreenTabletDown, ScreenSmallDeviceDown } from '../../utils/media'
 
 import * as data from './data'
@@ -29,7 +29,7 @@ const StyledGrid = styled.div`
 
 const StyledCategory = styled.div`
 
-  background: ${grayLight};
+  background: ${black};
   padding: 20px;
 
   &:hover {
@@ -45,10 +45,10 @@ const Skills = () => (
         data.categories.map((category) => {
           const skillList = category.skills
           return (
-            <StyledCategory>
+            <StyledCategory key={category.name}>
               <h3 className="typography__color--red  typography__list--title">{category.name}</h3>
               <ul className="spacing__margin-left--none">
-                {skillList.map(skill => <li className="elements__li--no-style  typography__list--items">{skill.name}</li>)}
+                {skillList.map(skill => <li key={skill.name} className="elements__li--no-style  typography__list--items">{skill.name}</li>)}
               </ul>
             </StyledCategory>
           )

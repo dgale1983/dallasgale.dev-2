@@ -4,15 +4,15 @@ import { red, grayLight } from '../styles/colors'
 
 import { transitionPt1 } from '../utils/transitions'
 import pxToRem from '../utils/px_to_rem'
-import { ScreenWidescreenDown } from '../utils/media'
+import { ScreenWidescreenDown, ScreenSmallDeviceDown } from '../utils/media'
 
 export const WorkTile = styled.button`
 
   background: ${grayLight};
   border: 0;
   margin-bottom: ${pxToRem(20)};
-  margin-left: 2px;
-  margin-right: 2px;
+  // margin-left: ${pxToRem(2)};
+  // margin-right: ${pxToRem(2)};
   ${transitionPt1};
 
   img {
@@ -27,6 +27,12 @@ export const WorkTile = styled.button`
     img {
       width: 80%;
     }
+  }
+
+  @media ${ScreenSmallDeviceDown} {
+    // margin-left: ${pxToRem(1)};
+    // margin-right: ${pxToRem(1)};
+    // margin-bottom: ${pxToRem(1)};
   }
 
   &:hover,
