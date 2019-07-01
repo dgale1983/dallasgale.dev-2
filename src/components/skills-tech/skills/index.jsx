@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import pxToRem from '../../utils/px_to_rem'
-import { black, white } from '../../styles/colors'
-import { ScreenWidescreenDown, ScreenDesktopDown, ScreenTabletDown } from '../../utils/media'
+import { black, white, grayLight } from '../../styles/colors'
+import { ScreenDesktopDown, ScreenTabletDown } from '../../utils/media'
 
 import * as data from './data'
 
@@ -25,8 +25,8 @@ const StyledGrid = styled.div`
 
 const StyledCategory = styled.div`
 
-  background: ${white};
-  border: 2px solid ${black};
+  background: ${grayLight};
+  // border: 2px solid ${black};
   padding: 20px;
 
   &:hover {

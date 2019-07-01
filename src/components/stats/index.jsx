@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import pxToRem from '../utils/px_to_rem'
@@ -35,7 +35,6 @@ const StyledGrid = styled.div`
 
   @media ${ScreenTabletDown} {
     width: 100%;
-    // transform: scale(0.8);
   }
 `
 
@@ -96,28 +95,21 @@ const stats = [
   { number: 'F O U R', thing: 'S T A R T - U P S' },
 ]
 
-const Stats = () => {
-
-  useEffect(() => {
-
-  })
-
-  return (
-    <StyledGrid>
-      <div>
-        <StyledTitle>Stats.</StyledTitle>
-        <StyledBottomBorder />
-      </div>
-      {
-        stats.map(stat => (
-          <StyledBox>
-            <div>{stat.number}</div>
-            <BoxLabelJustify>{stat.thing}</BoxLabelJustify>
-          </StyledBox>
-        ))
-      }
-    </StyledGrid>
-  )
-}
+const Stats = () => (
+  <StyledGrid>
+    <div>
+      <StyledTitle>Stats.</StyledTitle>
+      <StyledBottomBorder />
+    </div>
+    {
+      stats.map((stat, key) => (
+        <StyledBox key={key}>
+          <div>{stat.number}</div>
+          <BoxLabelJustify>{stat.thing}</BoxLabelJustify>
+        </StyledBox>
+      ))
+    }
+  </StyledGrid>
+)
 
 export default Stats

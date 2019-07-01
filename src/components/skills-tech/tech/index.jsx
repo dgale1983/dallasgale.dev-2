@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { black, white } from '../../styles/colors'
+import { black, white, grayLight } from '../../styles/colors'
 import { transitionPt1 } from '../../utils/transitions'
 import pxToRem from '../../utils/px_to_rem'
 import { ScreenWidescreenDown, ScreenDesktopDown, ScreenTabletDown } from '../../utils/media'
@@ -36,30 +36,27 @@ const StyledIconGrid = styled.div`
 
 const StyledIconBox = styled.div`
 
-  background: ${white};
-  border: 2px solid ${black};
   max-height: ${pxToRem(largeIcon)};
   max-width: ${pxToRem(largeIcon)};
   ${transitionPt1};
 
-  &:hover {
-    background: ${black};
-    ${transitionPt1};
+  @media ${ScreenWidescreenDown} {
+    max-height: ${pxToRem(largeIcon)};
+    max-width: ${pxToRem(largeIcon)};
   }
+
 
   img {
     width: 100%;
     padding: ${pxToRem(15)};
   }
-  
 
-  &:nth-child(3),
-  &:nth-child(10),
-  &:nth-child(24) {
-    &:hover {
-      img {
-        filter: invert(1);
-      }
+  &:hover {
+    background: ${grayLight};
+    ${transitionPt1};
+
+    img {
+      ${transitionPt1};
     }
   }
 

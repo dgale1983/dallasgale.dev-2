@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
-// import { MediaQuery } from 'react-responsive'
+import React, { useState } from 'react'
 
 import styled from 'styled-components'
 
@@ -21,8 +20,8 @@ const StyledGrid = styled.div`
 
   display: grid;
   align-items: start;
-  grid-template-columns: repeat(9, 1fr);
-  margin-top: 15%;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 5%;
 
   @media ${ScreenWidescreenDown} {
     margin-top: 10%;
@@ -39,12 +38,11 @@ const StyledGrid = styled.div`
 `
 
 const entireList = workHistoryData[0].list
-const defaultList = entireList.slice(0, 5)
 const defaultTech = entireList[0].tech
 
 
 const WorkHistory = () => {
-  const [allEmployees, setAllEmployees] = useState(entireList)
+  const [allEmployees] = useState(entireList)
   const [company, setCompany] = useState('')
   const [location, setLocation] = useState('')
   const [date, setDate] = useState('')

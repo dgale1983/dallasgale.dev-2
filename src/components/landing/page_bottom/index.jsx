@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { red } from '../../styles/colors'
 
-import { ScreenTabletLandscapeDown, ScreenTabletDown, ScreenPhoneDown } from '../../utils/media'
+import { ScreenTabletDown } from '../../utils/media'
 
 const StyledPageBottom = styled.div`
 

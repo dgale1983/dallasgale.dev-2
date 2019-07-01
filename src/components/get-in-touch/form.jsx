@@ -38,6 +38,7 @@ class Form extends React.Component {
           className="forms__form"
           onSubmit={this.handleSubmit}
           method="post"
+          netlify
           data-netlify="true"
           name="contact"
         >

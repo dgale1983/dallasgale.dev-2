@@ -39,14 +39,14 @@ const StyledPage = styled.div`
 `
 
 const Page = (props) => {
-  const { as: Element, children, fullWidth } = props
+  const { children, fullWidth } = props
   const context = useContext(ThemeContext)
 
   const [mounting, setMounting] = useState()
 
   useEffect(() => {
     setMounting(true)
-  })
+  }, [])
 
   return (
     <StyledPage isMounting={mounting} fullWidth={fullWidth} theme={context}>
@@ -58,14 +58,12 @@ const Page = (props) => {
 }
 
 Page.propTypes = {
-  as: PropTypes.element,
   // eslint-disable-next-line react/forbid-prop-types
   children: PropTypes.any.isRequired,
   fullWidth: PropTypes.bool,
 }
 
 Page.defaultProps = {
-  as: 'div',
   fullWidth: false,
 }
 

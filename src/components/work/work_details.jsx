@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 
-import { black, red, white } from '../styles/colors'
+import { red, white } from '../styles/colors'
 import pxToRem from '../utils/px_to_rem'
-import { ScreenWidescreenDown, ScreenTabletLandscapeDown, ScreenPhoneDown } from '../utils/media'
+import { ScreenWidescreenDown, ScreenPhoneDown } from '../utils/media'
 
 const slideUp = keyframes`
   0% {
@@ -59,7 +59,6 @@ const StyledLi = styled.li`
   padding-right: ${pxToRem(4)};
   line-height: 0;
 
-
   &:after {
     color: ${red};
     content: ' |';
@@ -90,7 +89,7 @@ const WorkDetails = (props) => {
     return () => {
       setMount('hidden')
     }
-  })
+  }, [])
 
   return (
     <StyledInfo visibility={hasMounted} opacity={opacity}>
@@ -106,8 +105,8 @@ const WorkDetails = (props) => {
           <h5 className="typography__heading--five">Tech.</h5>
           <StyledUl>
             {
-              tech.map(t => (
-                <StyledLi>{t}</StyledLi>
+              tech.map((t, key) => (
+                <StyledLi key={key}>{t}</StyledLi>
               ))
             }
           </StyledUl>

@@ -1,5 +1,4 @@
 import { keyframes } from 'styled-components'
-import { red } from '../styles/colors'
 
 export const transitionPt1 = `
   transition: all 0.1s ease-in-out;

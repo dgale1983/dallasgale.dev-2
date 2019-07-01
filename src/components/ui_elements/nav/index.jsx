@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { ThemeContext } from '../../get-in-touch'
 
 import pxToRem from '../../utils/px_to_rem'
-import { ScreenTabletDown, ScreenTabletLandscapeDown } from '../../utils/media'
+import { ScreenTabletLandscapeDown } from '../../utils/media'
 import { black, red, white } from '../../styles/colors'
 import { borderBottomRed } from '../borders'
 import { transitionPt1, transitionPt2 } from '../../utils/transitions'
