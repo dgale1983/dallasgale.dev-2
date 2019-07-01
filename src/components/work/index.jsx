@@ -60,7 +60,7 @@ const WorkHistory = () => {
   const [position, setPosition] = useState('')
   const [isOpacity, setIsOpacity] = useState(0)
 
-  const handleMouseOver = (e) => {
+  const handleShowDetails = (e) => {
     setCompany(e.name)
     setLocation(e.location)
     setDate(e.date)
@@ -70,7 +70,7 @@ const WorkHistory = () => {
     setIsOpacity(1)
   }
 
-  const handleMouseOut = () => {
+  const handleHideDetails = () => {
     setIsOpacity(0)
   }
 
@@ -85,10 +85,11 @@ const WorkHistory = () => {
               <WorkTile
                 aria-describedby={e.details}
                 key={e.name}
-                onMouseEnter={() => handleMouseOver(e)}
-                onFocus={() => handleMouseOver(e)}
-                onMouseLeave={() => handleMouseOut()}
-                onBlur={() => handleMouseOut()}
+                onMouseEnter={() => handleShowDetails(e)}
+                onFocus={() => handleShowDetails(e)}
+                onMouseLeave={() => handleHideDetails()}
+                onBlur={() => handleHideDetails()}
+                onClick={() => handleShowDetails(e)}
               >
                 <img src={e.logo} alt={e.name} />
               </WorkTile>

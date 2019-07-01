@@ -11,7 +11,6 @@ import { black, red, white } from '../styles/colors'
 
 const StyledGrid = styled.div`
 
-  background: ${white};
   align-items: center;
   text-align: center;
   display: grid;
@@ -45,9 +44,10 @@ const StyledGrid = styled.div`
 
 const StyledBox = styled(ThinBox)`
 
-  bottom: -100px;
+  bottom: ${pxToRem(-100)};
+  border-color: ${white};
   width: 100%;
-  color: ${black};
+  color: ${white};
   line-height: ${pxToRem(12)};
   padding: ${pxToRem(8)};
   position: relative;
@@ -73,7 +73,7 @@ const StyledBox = styled(ThinBox)`
 const StyledTitle = styled.h5`
 
   bottom: -100px;
-  color: ${black};
+  color: ${red};
   animation: ${statsAppear} 0.5s ease forwards;
   display: inline-block;
   font-size: ${pxToRem(20)};
