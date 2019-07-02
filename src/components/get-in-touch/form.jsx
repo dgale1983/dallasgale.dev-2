@@ -41,6 +41,7 @@ class Form extends React.Component {
           <textarea name="message"></textarea>
         </form>
         <form
+          data-netlify-recaptcha="true"
           className="forms__form"
           onSubmit={this.handleSubmit}
           method="post"
