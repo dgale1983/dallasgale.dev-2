@@ -1,3 +1,20 @@
+# My web development portfolio.
+
+Built with React.
+
+**Includes**
+- CSS Animations
+- CSS graphics
+- Sass
+- Netlify hosting
+- Netlift forms
+
+![Screenshot #1](https://github.com/DallasGale/dallasgale.dev/blob/master/screenshots/landing_page.png)
+
+Live Url - https://www.dallasgale.com + https://www.dallasgale.dev
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
