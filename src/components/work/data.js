@@ -52,7 +52,7 @@ export const workHistoryData = [
           wire frames and style-guides as well as collaborated with developers at the Institute of Creative Technology and University of Southern California. I also produced 
           video & photo content.
         `,
-        tech: ['Unity 2D platform', 'C#', 'React', 'WordPress', 'jQuery', 'javascript', 'SASS', 'Adobe Creative Cloud', 'Atlassian Confluence & JIRA'],
+        tech: ['Unity', 'C#', 'React', 'WordPress', 'jQuery', 'javascript', 'SASS', 'Adobe Creative Cloud', 'Confluence', 'JIRA'],
         links: [''],
       },
       {
@@ -66,7 +66,7 @@ export const workHistoryData = [
           A global advertising agency where I was hired as a contractor to help build front-end Vue components for the ‘Build & Price’ feature of holden.com.au. Agile development 
           process’ with daily stand-ups, and 3 week sprints.
         `,
-        tech: ['VueJS', 'Handlebars JS', 'SASS', 'Atlassian JIRA'],
+        tech: ['VueJS', 'Handlebars JS', 'SASS', 'JIRA'],
         links: [''],
       },
       {
