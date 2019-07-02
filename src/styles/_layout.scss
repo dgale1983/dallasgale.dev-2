@@ -58,6 +58,7 @@ template {
 }
 a {
   background-color: transparent;
+  cursor: pointer;
   -webkit-text-decoration-skip: objects;
 
   &:focus {

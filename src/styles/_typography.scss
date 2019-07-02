@@ -1,4 +1,10 @@
 .typography {
+  &__color {
+    &--brand {
+      color: $red;
+    }
+  }
+
   &__heading {
     &--one {
       font-size: rem(100);
@@ -116,12 +122,6 @@
         // font-size: rem();
         // line-height: rem(30);
       }
-    }
-  }
-
-  &__color {
-    &--red {
-      color: $red;
     }
   }
 

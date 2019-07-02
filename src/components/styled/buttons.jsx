@@ -40,7 +40,6 @@ export const LargeCtaLink = styled.a`
 
   background: ${black};
   border: 0;
-  cursor: pointer;
   color: ${white};
   font-size: ${pxToRem(20)};
   font-weight: 600;

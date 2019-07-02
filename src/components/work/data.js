@@ -121,10 +121,10 @@ export const workHistoryData = [
         date: 'December 2011 - May 2012',
         position: 'Digital Designer & Web Developer',
         details: `
-          I Designed & developed eBay fashion stores for Calvin Klein, Holdmetight & NancyGanz shapewear as well as developing responsive EDM’s, landing pages & animated web banners
+          I designed & developed eBay fashion stores for Calvin Klein, Holdmetight & NancyGanz shapewear as well as developing responsive EDM’s, landing pages & animated web banners
           Advanced Photoshop retouching of talent photography for use online.
         `,
-        tech: ['eBay Fashion Stores', 'javascript', 'jQuery', 'CSS', 'Adobe Creative Cloud'],
+        tech: ['eBay Fashion Store CMS', 'javascript', 'jQuery', 'CSS', 'Adobe Creative Cloud'],
         links: [''],
       },
       {

@@ -110,7 +110,7 @@ const WorkDetails = (props) => {
         </div>
         <div>
           <p className="typography__paragraph">{details}</p>
-          <h5 className="typography__heading--five">Tech.</h5>
+          <h5 className="typography__heading--five  typography__color--brand">Tech.</h5>
           <StyledUl>
             {
               tech.map((t, key) => (

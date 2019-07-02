@@ -46,7 +46,7 @@ const Skills = () => (
           const skillList = category.skills
           return (
             <StyledCategory key={category.name}>
-              <h3 className="typography__color--red  typography__list--title">{category.name}</h3>
+              <h3 className="typography__color--brand  typography__list--title">{category.name}</h3>
               <ul className="spacing__margin-left--none">
                 {skillList.map(skill => <li key={skill.name} className="elements__li--no-style  typography__list--items">{skill.name}</li>)}
               </ul>
