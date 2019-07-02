@@ -1,5 +1,5 @@
-<form hidden data-netlify-recaptcha="true" method="POST" data-netlify="true" name="Get In Touch" action="/thanks/"
-  netlify-honeypot="bot-field">
+<form name="contact" method="POST" data-netlify="true" action="thanks/" netlify-honeypot="bot-field"
+  data-netlify-recaptcha="true">
   <div>
     <input type="text" name="bot-field" hidden />
     <label htmlFor="name">
@@ -21,6 +21,6 @@
     </label>
     <textarea id="message" name="message" />
     </div>
-  <div data-netlify-recaptcha="true" />
-  <button type="submit">Send</button>
-</form>
+    <div data-netlify-recaptcha="true" />
+    <button type="submit">Send</button>
+  </form>

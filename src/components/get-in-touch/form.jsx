@@ -5,10 +5,9 @@ import NetlifyForm from 'react-netlify-form'
 import { SecondaryButton } from '../styled/buttons'
 
 
-const GetInTouch = (props) => {
-  const { history } = props
+const GetInTouch = () => {
   return (
-    <NetlifyForm name="Get In Touch">
+    <NetlifyForm name="contact">
       {({ loading, error, success }) => (
         <div>
           {loading && <div>Loading...</div>
@@ -20,7 +19,6 @@ const GetInTouch = (props) => {
           {!loading && !success && (
             <>
               <div>
-                <input type="text" name="bot-field" hidden />
                 <label
                   className="forms__label"
                   htmlFor="name"
