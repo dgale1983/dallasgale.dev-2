@@ -15,6 +15,7 @@ const StyledPageBottom = styled.div`
   height: auto;
   width: 100%;
   position: fixed;
+  z-index: 12;
 
   @media ${ScreenTabletDown} {
     padding: ${pxToRem(20)};

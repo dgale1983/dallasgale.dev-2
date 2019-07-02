@@ -20,8 +20,8 @@ export const workHistoryData = [
         date: 'March 2019 > Present',
         position: 'Front End Developer',
         details: `
-          Homepolish is an established start-up within the Interior Design industry. I worked closely with the product designers and developers to build out the client facing dashboard web app. 
-          Unit & functional tests were very important in the development cycle with code coverage of 93%.
+        Homepolish is an established start-up within the Interior Design industry. I worked closely with the product designers and developers to build features for their 
+        client facing dashboard web app. Unit & functional tests were very important in the development cycle with code coverage of 96%.
         `,
         tech: ['React', 'GraphQl', 'Apollo Client', 'Apollo Server', 'Webpack', 'styled-components', 'Codecov', 'GitHub Issues', 'Jest & Enzyme'],
         links: [''],
@@ -34,8 +34,8 @@ export const workHistoryData = [
         date: 'January 2019 > March 2019',
         position: 'Front End Developer',
         details: `
-          BML is an incubator for experimental digital solutions, and also a consultancy. I was hired to work on the SiriusXm account however I was moved onto a cyber security project 
-          called ConsortiumX where I contributed front-end development and documentation.
+        BML is an incubator for experimental digital solutions, and also a consultancy. I was hired to work on the SiriusXm account however 
+        I was moved onto a cyber security project called ConsortiumX, where I built out dashboard features.
         `,
         tech: ['VueJS', 'GitLab', 'SASS', 'Vuex'],
         links: [''],

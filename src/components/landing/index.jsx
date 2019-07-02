@@ -93,6 +93,8 @@ const StyledLink = styled(LargeCtaLink)`
   }
 `
 
+const folioPdf = 'https://drive.google.com/file/d/1O57whMIGbJ1axGDr9iPx9wRuzVCAysc_/view?usp=sharing'
+
 const Landing = () => (
   <>
     <Header />
@@ -121,7 +123,7 @@ const Landing = () => (
         <div>
           Looking to hire?
         </div>
-        <StyledLink href="https://drive.google.com/file/d/1SOfvB2-V5fBzHFcJlK2xnubdqP6UYBVi/view?usp=sharing" rel="noopener" target="_blank">
+        <StyledLink href={folioPdf} rel="noopener" target="_blank">
           Download CV &amp; Folio
         </StyledLink>
       </StyledHireCta>
