@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { black, white } from '../../styles/colors'
+import { black, white, red } from '../../styles/colors'
 import { transitionPt1, transitionPt2 } from '../../utils/transitions'
 import pxToRem from '../../utils/px_to_rem'
 import {
@@ -78,9 +78,9 @@ const StyledIconBox = styled.button`
 
 const StyledTechName = styled.h4`
 
-  background: ${black};
-  height: 50px;
-  border-radius: 20px;
+  background: ${red};
+  min-height: ${pxToRem(50)};
+  height: auto;
   display: grid;
   align-items: center;
   color: ${white};
@@ -93,6 +93,11 @@ const StyledTechName = styled.h4`
   padding: 0 ${pxToRem(20)};
   top: ${pxToRem(100)};
   left: ${pxToRem(20)};
+  
+  @media ${ScreenDesktopDown} {
+    font-size: ${pxToRem(16)};
+    min-height: ${pxToRem(30)};
+  }
 
   @media ${ScreenPhoneDown} {
     width: 100%;
@@ -108,14 +113,18 @@ const Tech = () => {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleDisplayDetails = (e) => {
-    setTechName(e.description)
-    setIsHovered(true)
+    setTimeout(() => {
+      setTechName(e.description)
+      setIsHovered(true)
+    }, 0)
     return null
   }
 
   const handleHideDetails = () => {
-    setIsHovered(false)
-    setTechName(null)
+    setTimeout(() => {
+      setIsHovered(false)
+      setTechName(null)
+    }, 0)
     return null
   }
 
@@ -130,7 +139,7 @@ const Tech = () => {
               onMouseLeave={() => handleHideDetails()}
               onFocus={() => handleDisplayDetails(tech)}
               onBlur={() => handleDisplayDetails(tech)}
-              onClick={() => handleHideDetails()}
+              onClick={() => handleDisplayDetails(tech)}
             >
               <img src={tech.src} alt={tech.name} />
             </StyledIconBox>
