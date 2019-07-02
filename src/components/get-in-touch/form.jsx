@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+// import { withRouter } from 'react-router-dom'
 import NetlifyForm from 'react-netlify-form'
 
 import { SecondaryButton } from '../styled/buttons'
@@ -15,7 +15,7 @@ const GetInTouch = (props) => {
           }
           {error && <div>Your information was not sent. Please try again later.</div>
           }
-          {success && history.push('/thanks/')
+          {success && <div>Thanks for getting in touch!</div>
           }
           {!loading && !success && (
             <>
