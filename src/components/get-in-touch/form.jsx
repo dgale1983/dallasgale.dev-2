@@ -12,7 +12,7 @@ const encode = data => (
 class Form extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { name: '', email: '', message: '' };
+    this.state = { name: '', email: '', message: '' }
   }
 
   handleSubmit = (e) => {
@@ -20,7 +20,7 @@ class Form extends React.Component {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
+      body: encode({ 'form-name': 'Get In Touch', ...this.state }),
     })
       .then(() => history.push('/thanks/'))
       .catch(error => alert(error))
@@ -34,22 +34,18 @@ class Form extends React.Component {
     const { name, email, message } = this.state
     return (
       <>
-        {/* A little help for the Netlify post-processing bots */}
-        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <textarea name="message"></textarea>
-        </form>
         <form
           data-netlify-recaptcha="true"
           className="forms__form"
           onSubmit={this.handleSubmit}
-          method="post"
+          method="POST"
           data-netlify="true"
-          name="contact"
+          name="Get In Touch"
+          action="/thanks/"
+          netlify-honeypot="bot-field"
         >
           <div>
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="text" name="bot-field" hidden />
             <label
               className="forms__label"
               htmlFor="name"
