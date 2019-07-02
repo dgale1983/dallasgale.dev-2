@@ -97,7 +97,7 @@ const GetInTouch = () => (
         <StyledH2>Send me a message</StyledH2>
         <Form />
         <StyledH2>Connect through a channel</StyledH2>
-        <Channel url="http://www.github.com/dgale1983" label="github.com/dgale1983" alt="Gitub repositories and code samples" src={GitHubIcon} />
+        <Channel url="http://www.github.com/DallasGale" label="github.com/DallasGale" alt="Gitub repositories and code samples" src={GitHubIcon} />
         <Channel url="http://www.linkedin.com/in/dallas-gale" label="linkedin.com/in/dallas-gale" alt="LinkedIn profile" src={LinkedInIcon} />
         <Channel url="http://www.twitter.com/dallascgale" label="twitter.com/dallascgale" alt="Twitter account" src={TwitterIcon} />
       </StyledContent>
