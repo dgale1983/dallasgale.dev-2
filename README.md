@@ -9,7 +9,7 @@ Built with React.
 - Netlify hosting
 - Netlift forms
 
-![Screenshot #1](https://github.com/DallasGale/dallasgale.dev/blob/master/screenshots/landing_page.png)
+![Screenshot #1](https://github.com/DallasGale/dallasgale.dev/blob/master/landing_page.png)
 
 Live Url - https://www.dallasgale.com + https://www.dallasgale.dev
 
