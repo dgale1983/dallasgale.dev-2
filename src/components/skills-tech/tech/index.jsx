@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { black, white, grayLight } from '../../styles/colors'
-import { transitionPt1 } from '../../utils/transitions'
+import { black, white } from '../../styles/colors'
+import { transitionPt1, transitionPt2 } from '../../utils/transitions'
 import pxToRem from '../../utils/px_to_rem'
 import {
   ScreenWidescreenDown,
@@ -41,12 +41,17 @@ const StyledIconGrid = styled.div`
   }
 `
 
-const StyledIconBox = styled.div`
+const StyledIconBox = styled.button`
 
   background: ${white};
+  border: none;
   max-height: ${pxToRem(largeIcon)};
   max-width: ${pxToRem(largeIcon)};
   ${transitionPt1};
+
+  &:focus {
+    outline-color: $red;
+  }
 
   @media ${ScreenWidescreenDown} {
     max-height: ${pxToRem(largeIcon)};
@@ -56,16 +61,9 @@ const StyledIconBox = styled.div`
 
   img {
     width: 100%;
+    margin-bottom: 0;
     padding: ${pxToRem(15)};
-  }
-
-  &:hover {
-    background: ${grayLight};
-    ${transitionPt1};
-
-    img {
-      ${transitionPt1};
-    }
+    ${transitionPt2};
   }
 
   @media ${ScreenWidescreenDown} {
@@ -97,8 +95,6 @@ const StyledTechName = styled.h4`
   left: ${pxToRem(20)};
 
   @media ${ScreenPhoneDown} {
-    // display: none;
-    // visibility: hidden;
     width: 100%;
     top: 0;
     left: 0;
@@ -111,13 +107,13 @@ const Tech = () => {
   const [techName, setTechName] = useState(' ')
   const [isHovered, setIsHovered] = useState(false)
 
-  const handleMouseEnter = (e) => {
+  const handleDisplayDetails = (e) => {
     setTechName(e.description)
     setIsHovered(true)
     return null
   }
 
-  const handleMouseLeave = () => {
+  const handleHideDetails = () => {
     setIsHovered(false)
     setTechName(null)
     return null
@@ -128,7 +124,14 @@ const Tech = () => {
       <StyledIconGrid>
         {
           data.techIcons.map(tech => (
-            <StyledIconBox key={tech.name} onMouseEnter={() => handleMouseEnter(tech)} onMouseLeave={() => handleMouseLeave()}>
+            <StyledIconBox
+              key={tech.name}
+              onMouseEnter={() => handleDisplayDetails(tech)}
+              onMouseLeave={() => handleHideDetails()}
+              onFocus={() => handleDisplayDetails(tech)}
+              onBlur={() => handleDisplayDetails(tech)}
+              onClick={() => handleHideDetails()}
+            >
               <img src={tech.src} alt={tech.name} />
             </StyledIconBox>
           ))

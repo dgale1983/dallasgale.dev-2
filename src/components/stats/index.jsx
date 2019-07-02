@@ -7,7 +7,7 @@ import { ScreenWidescreenDown, ScreenTabletDown, ScreenPhoneDown } from '../util
 
 import { ThinBox } from '../ui_elements/thin_box'
 import { BoxLabelJustify } from '../styled/typography'
-import { black, red, white } from '../styles/colors'
+import { red, white } from '../styles/colors'
 
 const StyledGrid = styled.div`
 
