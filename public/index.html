@@ -25,6 +25,32 @@
 </head>
 
 <body>
+  <form hidden data-netlify-recaptcha="true" method="POST" data-netlify="true" name="Get In Touch" action="/thanks/"
+    netlify-honeypot="bot-field">
+    <div>
+      <input type="text" name="bot-field" hidden />
+      <label htmlFor="name">
+        Your Name:
+      </label>
+      <input id="name" type="text" name="name" />
+    </div>
+
+    <div>
+      <label htmlFor="email">
+        Your Email:
+      </label>
+      <input id="email" type="email" name="email" />
+    </div>
+
+    <div>
+      <label htmlFor="message">
+        Message:
+      </label>
+      <textarea id="message" name="message" />
+      </div>
+    <div data-netlify-recaptcha="true" />
+    <button type="submit">Send</button>
+  </form>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 </body>

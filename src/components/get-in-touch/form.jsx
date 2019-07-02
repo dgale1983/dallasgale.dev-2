@@ -1,74 +1,76 @@
 import React from 'react'
-// import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import NetlifyForm from 'react-netlify-form'
 
 import { SecondaryButton } from '../styled/buttons'
 
 
-const GetInTouch = () => (
-  <NetlifyForm name="Get In Touch">
-    {({ loading, error, success }) => (
-      <div>
-        {loading && <div>Loading...</div>
-        }
-        {error && <div>Your information was not sent. Please try again later.</div>
-        }
-        {success && <div>Thank you for contacting us!</div>
-        }
-        {!loading && !success && (
-          <>
-            <div>
-              <input type="text" name="bot-field" hidden />
-              <label
-                className="forms__label"
-                htmlFor="name"
-              >
-                Your Name:
-              </label>
-              <input
-                className="forms__input"
-                id="name"
-                type="text"
-                name="name"
-              />
-            </div>
+const GetInTouch = (props) => {
+  const { history } = props
+  return (
+    <NetlifyForm name="Get In Touch">
+      {({ loading, error, success }) => (
+        <div>
+          {loading && <div>Loading...</div>
+          }
+          {error && <div>Your information was not sent. Please try again later.</div>
+          }
+          {success && history.push('/thanks/')
+          }
+          {!loading && !success && (
+            <>
+              <div>
+                <input type="text" name="bot-field" hidden />
+                <label
+                  className="forms__label"
+                  htmlFor="name"
+                >
+                  Your Name:
+                </label>
+                <input
+                  className="forms__input"
+                  id="name"
+                  type="text"
+                  name="name"
+                />
+              </div>
 
-            <div>
-              <label
-                className="forms__label"
-                htmlFor="email"
-              >
-                Your Email:
-              </label>
-              <input
-                className="forms__input"
-                id="email"
-                type="email"
-                name="email"
-              />
-            </div>
+              <div>
+                <label
+                  className="forms__label"
+                  htmlFor="email"
+                >
+                  Your Email:
+                </label>
+                <input
+                  className="forms__input"
+                  id="email"
+                  type="email"
+                  name="email"
+                />
+              </div>
 
-            <div>
-              <label
-                className="forms__label"
-                htmlFor="message"
-              >
-                Message:
-              </label>
-              <textarea
-                className="forms__textarea"
-                id="message"
-                name="message"
-              />
-            </div>
-            <div data-netlify-recaptcha="true" />
-            <SecondaryButton pullRight>Send</SecondaryButton>
-          </>
-        )}
-      </div>
-    )}
-  </NetlifyForm>
-)
+              <div>
+                <label
+                  className="forms__label"
+                  htmlFor="message"
+                >
+                  Message:
+                </label>
+                <textarea
+                  className="forms__textarea"
+                  id="message"
+                  name="message"
+                />
+              </div>
+              <SecondaryButton pullRight>Send</SecondaryButton>
+            </>
+          )}
+        </div>
+      )}
+    </NetlifyForm>
+  )
+}
 
 export default GetInTouch
 
