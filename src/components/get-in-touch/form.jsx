@@ -22,7 +22,7 @@ class Form extends React.Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state }),
     })
-      .then(() => history.push('/thanks'))
+      .then(() => history.push('/thanks/'))
       .catch(error => alert(error))
 
     e.preventDefault()
@@ -35,7 +35,7 @@ class Form extends React.Component {
     return (
       <>
         {/* A little help for the Netlify post-processing bots */}
-        <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
+        <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
           <input type="text" name="name" />
           <input type="email" name="email" />
           <textarea name="message"></textarea>
@@ -44,7 +44,6 @@ class Form extends React.Component {
           className="forms__form"
           onSubmit={this.handleSubmit}
           method="post"
-          netlify="true"
           data-netlify="true"
           name="contact"
         >
