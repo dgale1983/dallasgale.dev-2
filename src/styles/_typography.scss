@@ -16,11 +16,6 @@
         font-size: rem(60);
       }
 
-      @include respond-to("tablet-down") {
-        // font-size: rem(120);
-        // line-height: rem(90);
-      }
-
       @include respond-to("phone-down") {
         font-size: rem(60);
         line-height: rem(50);
@@ -44,14 +39,14 @@
       margin-top: rem(20);
 
       @include respond-to("desktop-down") {
-        font-size: rem(20);
+        font-size: rem(30);
         letter-spacing: rem(-1);
         margin-bottom: rem(2);
+        margin-top: rem(10);
       }
     }
 
     &--four {
-      // color: $wh/;
       display: block;
       font-weight: 400;
       font-size: rem(24);
@@ -88,12 +83,13 @@
   &__paragraph {
     font-size: rem(14);
     line-height: rem(18);
-    margin-top: rem(10);
+    margin-top: rem(60);
 
     &--hero {
       font-size: rem(40);
       font-weight: 100;
       line-height: rem(50);
+      margin-top: rem(10);
       padding-right: rem(600);
 
       @include respond-to("widescreen-down") {
@@ -108,8 +104,6 @@
 
       @include respond-to("tablet-down") {
         padding-right: rem(300);
-        // font-size: rem(35);
-        // line-height: rem(50);
       }
 
       @include respond-to("phone-down") {

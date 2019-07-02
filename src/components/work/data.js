@@ -20,11 +20,10 @@ export const workHistoryData = [
         date: 'March 2019 > Present',
         position: 'Front End Developer',
         details: `
-          A start-up in the Interior Design industry. Worked closely with the design team to build out their client facing dashboard web app. 
-          Stack includes React, GraphQL, Apollo Client, styled-components. Test driven commits with code coverage of 93% using 
-          Jest & Enzyme.
+          Homepolish is an established start-up within the Interior Design industry. I worked closely with the product designers and developers to build out the client facing dashboard web app. 
+          Unit & functional tests were very important in the development cycle with code coverage of 93%.
         `,
-        tech: ['React', 'GraphQl', 'Apollo Client', 'Apollo Server', 'Webpack', 'styled-components', 'Codecov', 'GitHub Issues'],
+        tech: ['React', 'GraphQl', 'Apollo Client', 'Apollo Server', 'Webpack', 'styled-components', 'Codecov', 'GitHub Issues', 'Jest & Enzyme'],
         links: [''],
       },
       {
@@ -35,8 +34,8 @@ export const workHistoryData = [
         date: 'January 2019 > March 2019',
         position: 'Front End Developer',
         details: `
-          A Consultancy. I was hired to work on the SiriusXm account however I ended up working for 3 months on a cyber security client portal 
-          called ConsortiumX. Mainly used Vue.js
+          BML is an incubator for experimental digital solutions, and also a consultancy. I was hired to work on the SiriusXm account however I was moved onto a cyber security project 
+          called ConsortiumX where I contributed front-end development and documentation.
         `,
         tech: ['VueJS', 'GitLab', 'SASS', 'Vuex'],
         links: [''],
@@ -49,7 +48,7 @@ export const workHistoryData = [
         date: 'February 2018 > January 2019',
         position: 'Front End Developer & UI Designer',
         details: `
-          A start-up in the AI industry where I contributed design & development for their app “HIA Talk”, re-designed & built their current website, created prototypes, 
+          HIA is a start-up within the Artifical Intelligence industry. I contributed design & front-end development for their app “HIA Talk”. I re-designed & built hia.ai, created prototypes, 
           wire frames and style-guides as well as collaborated with developers at the Institute of Creative Technology and University of Southern California. I also produced 
           video & photo content.
         `,
@@ -64,7 +63,7 @@ export const workHistoryData = [
         date: 'November 2017 > February 2018',
         position: 'Front End Developer',
         details: `
-          A global advertising agency where I was hired as a contractor to help build Vue components for the ‘Build & Price’ feature of holden.com.au. Agile development 
+          A global advertising agency where I was hired as a contractor to help build front-end Vue components for the ‘Build & Price’ feature of holden.com.au. Agile development 
           process’ with daily stand-ups, and 3 week sprints.
         `,
         tech: ['VueJS', 'Handlebars JS', 'SASS', 'Atlassian JIRA'],
@@ -78,8 +77,8 @@ export const workHistoryData = [
         date: 'October 2015 > October 2017',
         position: 'Front End Developer',
         details: `
-          As a start-up in the broker industry I helped build & design responsive Umbraco CMS, AngularJS + Angular sites & landing pages. I Integrated Angular Material Design, 
-          Bootstrap and Materialize UI components. I also built responsive EDMs that were delivered using Campaign Monitor & Mail Chimp. MLG implemented agile development process’ 
+          MLG was a start-up in the broker industry where I contributed front-end development & design of Umbraco CMS, AngularJS + Angular sites & landing pages. I Integrated Angular Material Design, 
+          Bootstrap and Materialize UI components. I also built responsive EDMs that were delivered using Campaign Monitor & MailChimp. MLG implemented agile development process’ 
           with daily stand-ups.
         `,
         tech: ['Umbraco CMS', 'C#', 'jQuery', 'javascript', 'AngularJS', 'Angular (2)', 'SASS', 'Material Design'],
@@ -93,9 +92,9 @@ export const workHistoryData = [
         date: 'Jul 2013 > Sep 2015',
         position: 'Digital Designer & Front End Developer',
         details: `
-          As a fast paced digital agency I designed and developed responsive sites, landing pages & EDM’s and daily web banners for retail giant 
-          Target. I converted existing static sites to be responsive using Bootstrap, JavaScript, jQuery & Green Sock animation library. 
-          I created wire-frames, site-maps & style guides for new projects and designed client branding.
+          As a fast paced digital agency I designed and developed responsive sites, landing pages & EDMs. Daily web banners for retail giant 
+          Target were created. I converted existing static sites to be responsive using Bootstrap, JavaScript, jQuery & GreenSockJs. 
+          I created wire-frames, site-maps & style guides for new projects and developed client branding.
         `,
         tech: ['jQuery', 'javascript', 'CSS', 'Bootstrap', 'Adobe Creative Cloud'],
         links: [''],
@@ -109,7 +108,7 @@ export const workHistoryData = [
         position: 'Front End Developer',
         details: `
           As a digital start-up in the food delivery app industry, I designed & developed responsive landing pages, EDM's and web banners. I contributed to the branding of the company 
-          by developing the mascot, an Octopus on a Scooter, which was used extensively in all marketing channels.
+          by developing the mascot, an octopus on a scooter, which was used extensively in all marketing channels.
         `,
         tech: ['Adobe Creative Cloud'],
         links: [''],

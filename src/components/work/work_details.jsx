@@ -101,10 +101,10 @@ const WorkDetails = (props) => {
 
   return (
     <StyledInfo visibility={hasMounted} opacity={opacity}>
-      <h3 className="typography__heading--three">{company}</h3>
-      <h4 className="typography__heading--four">{location}</h4>
       <StyledGrid>
         <div>
+          <h3 className="typography__heading--three">{company}</h3>
+          <h4 className="typography__heading--four">{location}</h4>
           <h5 className="typography__heading--five">{position}</h5>
           <h6 className="typography__heading--six">{date}</h6>
         </div>
