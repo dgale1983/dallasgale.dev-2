@@ -20,8 +20,8 @@ export const workHistoryData = [
         date: 'April 2019 > Present',
         position: 'Front End Developer',
         details: `
-        Homepolish is an established start-up within the Interior Design industry. I worked closely with the product designers and developers to build features for their 
-        client facing dashboard web app. Unit & functional tests were very important in the development cycle with code coverage of 96%.
+          Homepolish is a start-up in the Interior Design industry. I work closely with the product design team and other devs to build features for the client facing dashboard app. 
+          Unit & functional tests are used extensively in the development cycle with code coverage of 96% adheared to.
         `,
         tech: ['React', 'GraphQl', 'Apollo Client', 'Apollo Server', 'Webpack', 'styled-components', 'Codecov', 'GitHub Issues', 'Jest & Enzyme'],
         links: [''],
@@ -34,8 +34,8 @@ export const workHistoryData = [
         date: 'March 2019 > April 2019',
         position: 'Front End Developer',
         details: `
-        BML is an incubator for experimental digital solutions, and also a consultancy. I was hired to work on the SiriusXm account however 
-        I was moved onto a cyber security project called ConsortiumX, where I built out dashboard features.
+          Big Mirror Labs/Icon Interactive is a incubator for experimental digital solutions and a consultancy. 
+          I was hired to work on the SiriusXm account however I was moved onto a cyber security project called ConsortiumX, where I built dashboard features such as filtering & searching security products.
         `,
         tech: ['VueJS', 'GitLab', 'SASS', 'Vuex'],
         links: [''],
@@ -48,9 +48,9 @@ export const workHistoryData = [
         date: 'February 2018 > January 2019',
         position: 'Front End Developer & UI Designer',
         details: `
-          HIA is a start-up within the Artifical Intelligence industry. I contributed design & front-end development for their app “HIA Talk”. I re-designed & built hia.ai, created prototypes, 
-          wire frames and style-guides as well as collaborated with developers at the Institute of Creative Technology and University of Southern California. I also produced 
-          video & photo content.
+          HIA is a start-up in the AI industry. I learnt Unity development for this role becuase their flagshap app utilised 3D virtual human technology.
+          UI design & development was needed for both web and the iOS/Android app. I developed prototypes, wire frames and style-guides and collaborated with 3D animators & developers at the 
+          Institute of Creative Technology and University of Southern California.
         `,
         tech: ['Unity', 'C#', 'React', 'WordPress', 'jQuery', 'javascript', 'SASS', 'Adobe Creative Cloud', 'Confluence', 'JIRA'],
         links: [''],
@@ -63,8 +63,8 @@ export const workHistoryData = [
         date: 'November 2017 > February 2018',
         position: 'Front End Developer',
         details: `
-          A global advertising agency where I was hired as a contractor to help build front-end Vue components for the ‘Build & Price’ feature of holden.com.au. Agile development 
-          process’ with daily stand-ups, and 3 week sprints.
+          Isobar is a fast paced global advertising agency where I was hired as a contractor to build out features for holden.com.au. 
+          An agile work environment with 3 week sprints and daily stand-ups.
         `,
         tech: ['VueJS', 'Handlebars JS', 'SASS', 'JIRA'],
         links: [''],
