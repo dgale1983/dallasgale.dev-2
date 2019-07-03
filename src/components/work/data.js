@@ -17,7 +17,7 @@ export const workHistoryData = [
         name: 'Homepolish',
         logo: Homepolish,
         location: 'New York City, USA',
-        date: 'March 2019 > Present',
+        date: 'April 2019 > Present',
         position: 'Front End Developer',
         details: `
         Homepolish is an established start-up within the Interior Design industry. I worked closely with the product designers and developers to build features for their 
@@ -31,7 +31,7 @@ export const workHistoryData = [
         name: 'Big Mirror Labs',
         logo: BigMirrorLabs,
         location: 'New York City, USA',
-        date: 'January 2019 > March 2019',
+        date: 'March 2019 > April 2019',
         position: 'Front End Developer',
         details: `
         BML is an incubator for experimental digital solutions, and also a consultancy. I was hired to work on the SiriusXm account however 
