@@ -21,7 +21,7 @@ export const workHistoryData = [
         position: 'Front End Developer',
         details: `
           Homepolish is a start-up in the Interior Design industry. I work closely with the product design team and other devs to build features for the client facing dashboard app. 
-          Unit & functional tests are used extensively in the development cycle with code coverage of 96% adheared to.
+          Unit & functional tests are used extensively in the development cycle with code coverage of 96% adhered to.
         `,
         tech: ['React', 'GraphQl', 'Apollo Client', 'Apollo Server', 'Webpack', 'styled-components', 'Codecov', 'GitHub Issues', 'Jest & Enzyme'],
         links: [''],

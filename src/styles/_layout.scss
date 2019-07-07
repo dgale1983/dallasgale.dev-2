@@ -6,11 +6,12 @@ $base_size: 16; // Default
 
 @font-face {
   font-family: neuzeit-grotesk;
-  font-display: auto;
+  font-display: swap;
   src: local(neuzeit-grotesk);
 }
+
 html {
-  font-family: neuzeit-grotesk, helvetics, arial, sans-serif;
+  font-family: neuzeit-grotesk, helvetica, arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
