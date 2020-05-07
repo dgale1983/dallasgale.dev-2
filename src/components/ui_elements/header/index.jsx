@@ -8,7 +8,7 @@ const Header = () => (
     <div>
       <Logo />
     </div>
-    <Nav />
+    {/* <Nav /> */}
   </header>
 )
 

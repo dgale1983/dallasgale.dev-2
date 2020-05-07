@@ -9,6 +9,8 @@ import SkillsTech from './components/skills-tech'
 import GetInTouch from './components/get-in-touch'
 import Thanks from './components/get-in-touch/thanks'
 
+import PrivateSandbox from './components/_private-sandbox/'
+
 const App = () => (
   <Layout>
     <Switch>
@@ -17,6 +19,8 @@ const App = () => (
       <Route path="/skills-tech/" component={SkillsTech} />
       <Route path="/get-in-touch/" component={GetInTouch} />
       <Route path="/thanks/" component={Thanks} />
+      {/* Add .env flag here  */}
+      <Route path="/private-sandbox/" component={PrivateSandbox} />
     </Switch>
   </Layout>
 )

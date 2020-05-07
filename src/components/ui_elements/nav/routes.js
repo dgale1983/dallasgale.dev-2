@@ -1,5 +1,5 @@
 export const routes = [
-  { url: 'work-history', name: 'Work History.' },
-  { url: 'skills-tech', name: 'Skills & Tech.' },
-  { url: 'get-in-touch', name: 'Get In Touch.' },
+  { id: 1, url: 'work-history', name: 'Work History.' },
+  { id: 2, url: 'skills-tech', name: 'Skills & Tech.' },
+  { id: 3, url: 'get-in-touch', name: 'Get In Touch.' },
 ]

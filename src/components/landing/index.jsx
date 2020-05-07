@@ -18,44 +18,41 @@ import {
 } from '../utils/media'
 
 const StyledContent = styled.div`
-
   position: relative;
   padding-top: 5%;
-  width: 90%;
+  width: 50%;
 
   @media ${ScreenWidescreenDown} {
     padding-top: 6%;
     padding-bottom: ${pxToRem(200)};
-    width: 80%;
+    /* width: 80%; */
   }
 
   @media ${ScreenDesktopDown} {
     padding-top: 3%;
-    width: 70%;
+    /* width: 70%; */
   }
 
   @media ${ScreenTabletLandscapeDown} {
     padding-bottom: ${pxToRem(200)};
-    width: 45%;
+    /* width: 45%; */
   }
 
   @media ${ScreenTabletDown} {
     width: 100%;
   }
-  
+
   @media ${ScreenSmallDeviceDown} {
     padding-bottom: ${pxToRem(20)};
   }
 `
 
 const StyledCode = styled.span`
-
   color: ${red};
   font-weight: 100;
 `
 
 const StyledHireCta = styled.div`
-
   color: ${white};
   font-size: ${pxToRem(35)};
   font-weight: 100;
@@ -101,9 +98,9 @@ const Landing = () => (
     <Page>
       <StyledContent>
         <h1 className="typography__heading--one">
-          I make<br />
-          <StyledCode>&nbsp;&#60;</StyledCode>web sites<StyledCode>/&#62;</StyledCode>
-          .
+          I make
+          <br />
+          <StyledCode>&nbsp;&#60;</StyledCode>web sites<StyledCode>/&#62;</StyledCode>.
         </h1>
         <p className="typography__paragraph--hero">
           Hi! I’m Dallas Gale, a&nbsp;
@@ -111,8 +108,7 @@ const Landing = () => (
           and
           <strong> designer </strong>
           with over 8 years experience working in both
-          <strong> Australia &amp; the USA. </strong>
-          I specialize in building modern responsive UI using
+          <strong> Australia &amp; the USA. </strong>I specialize in building modern responsive UI using
           <strong> JavaScript, CSS &amp; HTML.</strong>
         </p>
       </StyledContent>
@@ -120,9 +116,7 @@ const Landing = () => (
     <PageBottom>
       <FeatureImage />
       <StyledHireCta>
-        <div>
-          Looking to hire?
-        </div>
+        <div>Looking to hire?</div>
         <StyledLink href={folioPdf} rel="noopener" target="_blank">
           Download CV &amp; Folio
         </StyledLink>
