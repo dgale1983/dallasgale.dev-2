@@ -20,7 +20,7 @@ import {
 const StyledContent = styled.div`
   position: relative;
   padding-top: 5%;
-  width: 50%;
+  width: 40%;
 
   @media ${ScreenWidescreenDown} {
     padding-top: 6%;
@@ -39,11 +39,12 @@ const StyledContent = styled.div`
   }
 
   @media ${ScreenTabletDown} {
-    width: 100%;
+    width: 60%;
   }
 
   @media ${ScreenSmallDeviceDown} {
     padding-bottom: ${pxToRem(20)};
+    width: 100%;
   }
 `
 
