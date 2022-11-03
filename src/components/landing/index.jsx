@@ -91,7 +91,7 @@ const StyledLink = styled(LargeCtaLink)`
   }
 `
 
-const folioPdf = 'https://drive.google.com/file/d/1O57whMIGbJ1axGDr9iPx9wRuzVCAysc_/view?usp=sharing'
+const folioPdf = 'https://drive.google.com/file/d/16XD_4oQiAkse5JyzizV4x9O0DwnVv9E5/view?usp=share_link'
 
 const Landing = () => (
   <>
@@ -105,12 +105,12 @@ const Landing = () => (
         </h1>
         <p className="typography__paragraph--hero">
           Hi! I’m Dallas Gale, a&nbsp;
-          <strong>front-end dev </strong>
-          and
-          <strong> designer </strong>
-          with over 8 years experience working in both
-          <strong> Australia &amp; the USA. </strong>I specialize in building modern responsive UI using
-          <strong> JavaScript, CSS &amp; HTML.</strong>
+          <strong>front-end UI developer </strong>
+          and <em>(sometimes)</em> designer from Yarra Valley, Victoria. I have 10 years of experience working remotely
+          and on-site in Australia and the USA.
+          <br />
+          <br />I specialise in accessible, modern responsive UI using <strong>React</strong>, <strong>JS</strong>,{' '}
+          <strong>CSS</strong> &amp; <strong>HTML</strong>.
         </p>
       </StyledContent>
     </Page>
