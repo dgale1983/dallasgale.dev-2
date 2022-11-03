@@ -1,16 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { black, white, red } from '../../styles/colors'
+import { white, red } from '../../styles/colors'
 import { transitionPt1, transitionPt2 } from '../../utils/transitions'
 import pxToRem from '../../utils/px_to_rem'
-import {
-  ScreenWidescreenDown,
-  ScreenDesktopDown,
-  ScreenTabletDown,
-  ScreenPhoneDown,
-} from '../../utils/media'
-
+import { ScreenWidescreenDown, ScreenDesktopDown, ScreenTabletDown, ScreenPhoneDown } from '../../utils/media'
 
 import * as data from './data'
 
@@ -18,7 +12,6 @@ const largeIcon = 84
 const mediumIcon = 60
 
 const StyledIconGrid = styled.div`
-
   display: grid;
   align-items: center;
   justify-items: center;
@@ -42,7 +35,6 @@ const StyledIconGrid = styled.div`
 `
 
 const StyledIconBox = styled.button`
-
   background: ${white};
   border: none;
   max-height: ${pxToRem(largeIcon)};
@@ -57,7 +49,6 @@ const StyledIconBox = styled.button`
     max-height: ${pxToRem(largeIcon)};
     max-width: ${pxToRem(largeIcon)};
   }
-
 
   img {
     width: 100%;
@@ -77,7 +68,6 @@ const StyledIconBox = styled.button`
 `
 
 const StyledTechName = styled.h4`
-
   background: ${red};
   min-height: ${pxToRem(50)};
   height: auto;
@@ -89,11 +79,11 @@ const StyledTechName = styled.h4`
   line-height: ${pxToRem(20)};
   opacity: ${props => (props.hovered ? 1 : 0)};
   position: fixed;
-  transition: all  ease 0.3s;
+  transition: all ease 0.3s;
   padding: 0 ${pxToRem(20)};
   top: ${pxToRem(100)};
   left: ${pxToRem(20)};
-  
+
   @media ${ScreenDesktopDown} {
     font-size: ${pxToRem(16)};
     min-height: ${pxToRem(30)};
@@ -112,7 +102,7 @@ const Tech = () => {
   const [techName, setTechName] = useState(' ')
   const [isHovered, setIsHovered] = useState(false)
 
-  const handleDisplayDetails = (e) => {
+  const handleDisplayDetails = e => {
     setTimeout(() => {
       setTechName(e.description)
       setIsHovered(true)
@@ -131,20 +121,18 @@ const Tech = () => {
   return (
     <>
       <StyledIconGrid>
-        {
-          data.techIcons.map(tech => (
-            <StyledIconBox
-              key={tech.name}
-              onMouseEnter={() => handleDisplayDetails(tech)}
-              onMouseLeave={() => handleHideDetails()}
-              onFocus={() => handleDisplayDetails(tech)}
-              onBlur={() => handleDisplayDetails(tech)}
-              onClick={() => handleDisplayDetails(tech)}
-            >
-              <img src={tech.src} alt={tech.name} />
-            </StyledIconBox>
-          ))
-        }
+        {data.techIcons.map(tech => (
+          <StyledIconBox
+            key={tech.name}
+            onMouseEnter={() => handleDisplayDetails(tech)}
+            onMouseLeave={() => handleHideDetails()}
+            onFocus={() => handleDisplayDetails(tech)}
+            onBlur={() => handleDisplayDetails(tech)}
+            onClick={() => handleDisplayDetails(tech)}
+          >
+            <img src={tech.src} alt={tech.name} />
+          </StyledIconBox>
+        ))}
       </StyledIconGrid>
       <StyledTechName hovered={isHovered}>{techName}</StyledTechName>
     </>

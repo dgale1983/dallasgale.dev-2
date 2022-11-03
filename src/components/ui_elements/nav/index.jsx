@@ -3,8 +3,6 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import Config from '../../../_config'
-
 import { ThemeContext } from '../../get-in-touch'
 
 import { red, white } from '../../styles/colors'
@@ -13,7 +11,6 @@ import { transitionPt1, transitionPt2 } from '../../utils/transitions'
 import { routes } from './routes'
 
 const StyledLink = styled(Link)`
-
   color: ${white};
   text-decoration: none;
   ${transitionPt1};
@@ -24,11 +21,6 @@ const StyledLink = styled(Link)`
   }
 `
 
-const privateSandbox = {
-  url: 'private_sandbox',
-  name: 'PRIVATE SANDBOX',
-}
-
 const Nav = () => {
   const context = useContext(ThemeContext)
 
@@ -36,16 +28,12 @@ const Nav = () => {
     <nav className="elements__nav">
       <ul className="elements__nav-links">
         {routes.map(route => (
-          <li
-            key={route.id}
-            className="elements__nav-links--item"
-          >
+          <li key={route.id} className="elements__nav-links--item">
             <StyledLink to={`/${route.url}/`} theme={context}>
               {route.name}
             </StyledLink>
           </li>
-        ))
-        }
+        ))}
         {/* {Config.Flags.IS_PRIVATE_SANDBOX_ENABLED && (
           <li className="elements__nav-links--item" key={4}>
             <StyledLink to={`/${privateSandbox.url}/`} theme={context}>
@@ -57,6 +45,5 @@ const Nav = () => {
     </nav>
   )
 }
-
 
 export default Nav

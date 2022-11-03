@@ -2,14 +2,14 @@
 import React from 'react'
 import axios from 'axios'
 
-import { compareObjectKeys, convertKbsToMb, filterByFirstCharacter } from './_utils'
+import { compareObjectKeys, convertKbsToMb } from './_utils'
 
 const githubUsername = 'dallasgale'
 
 const aArray = []
 const bArray = []
 
-const getSortedRepos = (data) => {
+const getSortedRepos = data => {
   data.edges.sort(compareObjectKeys).map(({ node }) => {
     const { name } = node
     const nameArray = name.toLowerCase().split('')
@@ -34,8 +34,6 @@ class GithubApi extends React.Component {
   componentDidMount() {
     this._getGithubData()
   }
-
-
 
   _getGithubData() {
     axios({
@@ -62,32 +60,33 @@ class GithubApi extends React.Component {
       headers: {
         Authorization: 'bearer 3fd431d21477794d64bb48c4a29d0520fca1d51d',
       },
-    }).then((response) => {
-      console.log('repositories', response.data.data.user.repositories)
-      this.setState({
-        repos: response.data.data.user.repositories,
-      })
-    }).catch((err) => {
-      console.log(err)
-      return null
     })
+      .then(response => {
+        console.log('repositories', response.data.data.user.repositories)
+        this.setState({
+          repos: response.data.data.user.repositories,
+        })
+      })
+      .catch(err => {
+        console.log(err)
+        return null
+      })
   }
-
 
   render() {
     const { repos } = this.state
     // const arrayOfNames = []
     // console.log('arrayOfNames', arrayOfNames.map(item => item))
-    const alphabet = 'abcdefghijklmnopqrstuv'
     // const alphabetArray = alphabet.split('')
     const sortedRepost = repos
-
 
     return (
       <div>
         <div>
           <h2>My Github data using github.api</h2>
-          {repos.length === 0 ? 'l o a d i n g d a t a...' : (
+          {repos.length === 0 ? (
+            'l o a d i n g d a t a...'
+          ) : (
             <>
               {getSortedRepos(sortedRepost)}
               <div>
@@ -100,8 +99,16 @@ class GithubApi extends React.Component {
                 <h3>Links to repos:</h3>
                 <div>
                   <>
-                    <ul id="a">{aArray.map(item => <li>{item}</li>)}</ul>
-                    <ul id="b">{bArray.map(item => <li>{item}</li>)}</ul>
+                    <ul id="a">
+                      {aArray.map(item => (
+                        <li>{item}</li>
+                      ))}
+                    </ul>
+                    <ul id="b">
+                      {bArray.map(item => (
+                        <li>{item}</li>
+                      ))}
+                    </ul>
                   </>
 
                   {/* {
@@ -119,7 +126,6 @@ class GithubApi extends React.Component {
                           // console.log(arrayOfNames)
                           <div className="group">{arrayOfNames.map(item => item)}</div>
                       )} */}
-
                 </div>
               </div>
             </>
